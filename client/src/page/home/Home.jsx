@@ -32,7 +32,9 @@ const Home = () => {
         <div className="loader">
             {
                 loading ?
-                ( <></>):
+                ( <>
+                loading
+                </>):
             (  <>
             {searchText && (
                 <h2>
