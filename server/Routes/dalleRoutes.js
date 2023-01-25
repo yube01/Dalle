@@ -14,16 +14,16 @@ const Router = express.Router();
 
 const configuration = new Configuration(
 
-   { apiKey: process.env.OPENAIAPI_KEY,}
+   { apiKey: process.env.OPENAI_API_KEY,}
 )
 
 
 //new instances 
-const openai = new OpenAIApi(Configuration);
+const openai = new OpenAIApi(configuration);
 
 
 Router.route("/").get((req , res) =>{
-    res.send("HEllo")
+    res.status(200).json({ message : "HEllo"})
 })
 
 Router.route("/").post(async(req, res)=>{
@@ -46,8 +46,9 @@ Router.route("/").post(async(req, res)=>{
         res.status(200).json({photo: image})
         
     } catch (error) {
+        console.log(error)
 
-        res.status(500).send(error?.response.data.error.message)       
+        res.status(500).send(error?.response.data.error.message || 'Something went wrong')       
     }
 })
 
