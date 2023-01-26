@@ -1,0 +1,32 @@
+.container h1{
+
+    margin-bottom: 2rem;
+
+}
+
+.img2{
+    position: relative;
+    width: 10rem;
+    color: grey;
+    opacity: 0.4;
+    margin-bottom: 2rem;
+    
+}
+
+.loading{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+
+}
+
+.generateimg button{
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    
+
+}

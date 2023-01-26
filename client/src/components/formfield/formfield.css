@@ -1,0 +1,36 @@
+.form{
+    margin-bottom: 1rem;
+}
+
+.first{
+    display: flex;
+    
+}
+
+.field{
+    font-size: 2rem;
+    margin: 1rem 0;
+    
+}
+
+.btn{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    padding: 0rem;
+}
+
+.inputBox{
+    padding: 1rem 0rem;
+    font-size: 1.3rem;
+    width: 25rem;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid grey;
+
+}

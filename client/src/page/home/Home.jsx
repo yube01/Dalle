@@ -50,7 +50,7 @@ const Home = () => {
                 ):(
                     <RenderCards
                     data={[]}
-                    title="No post found"/>
+                    title=""/>
                 )}
 
 

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import FormField from '../../components/formfield/FormField'
 import { useState } from 'react';
 import Preview from "../../assets/preview.png"
+import Load from "../../assets/load.gif"
 
 import { getRandomPrompt } from '../../utils';
 
@@ -44,7 +45,7 @@ const Post = () => {
       try {
 
         setGeneratingImg(true);
-        const response = await fetch("http://localhost:6660/api/v1/dalle",{
+        const response = await fetch("https://dalle-goug.onrender.com/api/v1/dalle",{
           method:"POST",
           headers:{
             "Content-Type":"application/json"
@@ -120,7 +121,7 @@ const Post = () => {
 
             { generatingImg && (
               <div className="loading">
-                loading
+                <img src={Load} alt="" />
               </div>
             )}
 
@@ -139,20 +140,7 @@ const Post = () => {
           </button>
         </div>
 
-        <div className="submit">
-          <p>
-            Share your generated image with the community
-          </p>
-          <button
-          type='submit'
-          className='submitImg'
-          >
-            {
-              loading ? "Sharing..." :" Share with community"
-            }
-
-          </button>
-        </div>
+        
 
 
 
